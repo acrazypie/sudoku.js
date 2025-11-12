@@ -2,9 +2,11 @@
 
 _A Sudoku puzzle generator & solver JavaScript library_
 
-[![npm version](https://img.shields.io/npm/v/sudoku.js.svg)](https://www.npmjs.com/package/@acrazypie/sudoku.js)
+[![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@acrazypie/sudoku.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/acrazypie/sudoku.js)](https://github.com/acrazypie/sudoku.js/issues)
+
+
 
 ## 🚀 Overview
 
@@ -88,3 +90,4 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 ## 📢 Changelog
 
 _(Updates here, e.g., version 1.0, features, fixes.)_
+
