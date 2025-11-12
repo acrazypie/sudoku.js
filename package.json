@@ -1,0 +1,25 @@
+{
+    "name": "@acrazypie/sudoku.js",
+    "version": "1.0.0",
+    "description": "A Sudoku puzzle generator & solver JavaScript library",
+    "main": "sudoku.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acrazypie/sudoku.js.git"
+    },
+    "keywords": [
+        "sudoku",
+        "generator",
+        "solver",
+        "puzzle"
+    ],
+    "author": "Elisa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/acrazypie/sudoku.js/issues"
+    },
+    "homepage": "https://github.com/acrazypie/sudoku.js#readme"
+}

@@ -1,6 +1,6 @@
 # sudoku.js
 
-*A Sudoku puzzle generator & solver JavaScript library*
+_A Sudoku puzzle generator & solver JavaScript library_
 
 [![npm version](https://img.shields.io/npm/v/sudoku.js.svg)](https://www.npmjs.com/package/@acrazypie/sudoku.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -12,10 +12,10 @@
 
 ### Key features
 
-* Generate valid Sudoku puzzles (unique solution)
-* Solve a given Sudoku board (backtracking / constraint logic)
-* Minimal, dependency-free JavaScript
-* Easy integration for web apps, games, or educational tools
+-   Generate valid Sudoku puzzles (unique solution)
+-   Solve a given Sudoku board (backtracking / constraint logic)
+-   Minimal, dependency-free JavaScript
+-   Easy integration for web apps, games, or educational tools
 
 ## 📦 Installation
 
@@ -30,7 +30,7 @@ npm i @acrazypie/sudoku.js
 ```html
 <script src="path/to/sudoku.js"></script>
 <script>
-  // sudoku is now available globally
+    // sudoku is now available globally
 </script>
 ```
 
@@ -39,7 +39,7 @@ npm i @acrazypie/sudoku.js
 ### Generate a puzzle
 
 ```js
-const { generate } = require('sudoku.js');
+const { generate } = require("sudoku.js");
 
 const puzzle = generate();
 console.log(puzzle);
@@ -48,12 +48,12 @@ console.log(puzzle);
 ### Solve a board
 
 ```js
-const { solve } = require('sudoku.js');
+const { solve } = require("sudoku.js");
 
 const board = [
-  [5, 3, 0, 0, 7, 0, 0, 0, 0],
-  [6, 0, 0, 1, 9, 5, 0, 0, 0],
-  // ...
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    // ...
 ];
 const solution = solve(board);
 console.log(solution);
@@ -61,20 +61,21 @@ console.log(solution);
 
 ## ⚙️ API Reference
 
-* `generate([options])` – Generate a Sudoku puzzle. Options can include:
+-   `generate([options])` – Generate a Sudoku puzzle. Options can include:
 
-  * `difficulty`: `'easy' | 'medium' | 'hard'`
-  * `clues`: Number of prefilled cells
-  * `seed`: Random seed
-* `solve(board)` – Solve a given 9×9 board. Returns the solution or `null`.
-* `isValid(board)` – Check if a board is valid (no conflicts). *(if implemented)*
+    -   `difficulty`: `'easy' | 'medium' | 'hard'`
+    -   `clues`: Number of prefilled cells
+    -   `seed`: Random seed
+
+-   `solve(board)` – Solve a given 9×9 board. Returns the solution or `null`.
+-   `isValid(board)` – Check if a board is valid (no conflicts). _(if implemented)_
 
 ## 🤚 Testing & Contributing
 
-* Fork → modify → submit Pull Request
-* Add tests for new functionality
-* Follow existing code style (plain JavaScript)
-* Open Issues for bugs or feature requests
+-   Fork → modify → submit Pull Request
+-   Add tests for new functionality
+-   Follow existing code style (plain JavaScript)
+-   Open Issues for bugs or feature requests
 
 ## 📝 License
 
@@ -86,5 +87,4 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 
 ## 📢 Changelog
 
-*(Add your updates here, e.g., version 1.0, features, fixes.)*
-
+_(Updates here, e.g., version 1.0, features, fixes.)_
