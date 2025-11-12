@@ -2,7 +2,7 @@
 
 *A Sudoku puzzle generator & solver JavaScript library*
 
-[![npm version](https://img.shields.io/npm/v/sudoku.js.svg)](https://www.npmjs.com/package/sudoku.js)
+[![npm version](https://img.shields.io/npm/v/sudoku.js.svg)](https://www.npmjs.com/package/@acrazypie/sudoku.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/acrazypie/sudoku.js)](https://github.com/acrazypie/sudoku.js/issues)
 
@@ -19,12 +19,10 @@
 
 ## 📦 Installation
 
-### Using npm / Yarn
+### Using npm
 
 ```bash
-npm install sudoku.js
-# or
-yarn add sudoku.js
+npm i @acrazypie/sudoku.js
 ```
 
 ### Using via script tag
@@ -89,3 +87,4 @@ This project follows the [Contributor Covenant Code of Conduct](https://www.cont
 ## 📢 Changelog
 
 *(Add your updates here, e.g., version 1.0, features, fixes.)*
+
