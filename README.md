@@ -70,7 +70,7 @@ console.log(solution);
     -   `seed`: Random seed
 
 -   `solve(board)` – Solve a given 9×9 board. Returns the solution or `null`.
--   `isValid(board)` – Check if a board is valid (no conflicts). _(if implemented)_
+-   `validate_board(board)` – Check if a board is valid (no conflicts). _(if implemented)_
 
 ## 🤚 Testing & Contributing
 
