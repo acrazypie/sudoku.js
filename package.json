@@ -4,7 +4,9 @@
     "description": "A Sudoku puzzle generator & solver JavaScript library",
     "main": "sudoku.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "release": "standard-version",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",
@@ -21,5 +23,11 @@
     "bugs": {
         "url": "https://github.com/acrazypie/sudoku.js/issues"
     },
-    "homepage": "https://github.com/acrazypie/sudoku.js#readme"
+    "homepage": "https://github.com/acrazypie/sudoku.js#readme",
+    "devDependencies": {
+        "@commitlint/cli": "^20.1.0",
+        "@commitlint/config-conventional": "^20.0.0",
+        "husky": "^9.1.7",
+        "standard-version": "^9.5.0"
+    }
 }
