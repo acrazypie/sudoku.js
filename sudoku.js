@@ -15,7 +15,7 @@
     - _generate_full_solution(): creates a completed, valid solution via backtracking
     - _count_solutions(): search routine that counts up to a limit (used for uniqueness)
     - generate(): rewritten to create full solution, remove clues while checking uniqueness
-    - _logical_solve_candidates(): basic logical solver (naked singles + hidden singles) 
+    - _logical_solve_candidates(): basic logical solver (naked singles + hidden singles)
         used to prefer puzzles solvable by simple human strategies
 */
 
@@ -838,3 +838,5 @@
     // Pass whatever the root object is, like 'window' in browsers
     return sudoku;
 });
+
+export default sudoku;
