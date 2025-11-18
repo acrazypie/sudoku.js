@@ -3,21 +3,29 @@
 _A Sudoku puzzle generator & solver JavaScript library_
 
 [![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff)](https://www.npmjs.com/package/@acrazypie/sudoku.js)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/acrazypie/sudoku.js)](https://github.com/acrazypie/sudoku.js/issues)
-
-
 
 ## 🚀 Overview
 
-`sudoku.js` is a lightweight JavaScript library for generating and solving standard 9×9 Sudoku puzzles. It is designed to work seamlessly in browser environments and Node.js.
+`sudoku.js` is a compact JavaScript library for generating and solving
+**9×9 Sudoku puzzles**.\
+It is fully browser-compatible and can also be imported in Node.js or
+bundlers.
+
+The puzzle generator uses constraint propagation + randomization to
+produce boards at various difficulties, while the solver guarantees a
+valid solution using depth-first search with constraint logic.
 
 ### Key features
 
--   Generate valid Sudoku puzzles (unique solution)
--   Solve a given Sudoku board (backtracking / constraint logic)
--   Minimal, dependency-free JavaScript
--   Easy integration for web apps, games, or educational tools
+-   ✔️ Generate playable Sudoku puzzles\
+-   ✔️ Choose difficulty: **easy, medium, expert, master, extreme**\
+-   ✔️ Solve any valid puzzle automatically\
+-   ✔️ Zero dependencies\
+-   ✔️ Works in browser and Node.js\
+-   ✔️ Lightweight & simple to integrate
 
 ## 📦 Installation
 
@@ -27,12 +35,12 @@ _A Sudoku puzzle generator & solver JavaScript library_
 npm i @acrazypie/sudoku.js
 ```
 
-### Using via script tag
+### Using via script tag (browser global)
 
 ```html
 <script src="path/to/sudoku.js"></script>
 <script>
-    // sudoku is now available globally
+    const puzzle = sudoku.generate("medium");
 </script>
 ```
 
@@ -41,53 +49,80 @@ npm i @acrazypie/sudoku.js
 ### Generate a puzzle
 
 ```js
-const { generate } = require("sudoku.js");
+import sudoku from "@acrazypie/sudoku.js";
 
-const puzzle = generate();
+const puzzle = sudoku.generate("expert");
 console.log(puzzle);
 ```
 
-### Solve a board
+### Solve a puzzle
 
 ```js
-const { solve } = require("sudoku.js");
+const solved = sudoku.solve(puzzle);
+console.log(solved);
+```
 
-const board = [
-    [5, 3, 0, 0, 7, 0, 0, 0, 0],
-    [6, 0, 0, 1, 9, 5, 0, 0, 0],
-    // ...
-];
-const solution = solve(board);
-console.log(solution);
+### Validate a board
+
+```js
+const valid = sudoku.validate_board(puzzle);
+console.log(valid);
 ```
 
 ## ⚙️ API Reference
 
--   `generate([options])` – Generate a Sudoku puzzle. Options can include:
+### `sudoku.generate(difficulty?, unique = true)`
 
-    -   `difficulty`: `'easy' | 'medium' | 'hard'`
-    -   `clues`: Number of prefilled cells
-    -   `seed`: Random seed
+Generate a Sudoku puzzle.\
+Returns an **81-character string**, using `"."` for empty cells.
 
--   `solve(board)` – Solve a given 9×9 board. Returns the solution or `null`.
--   `validate_board(board)` – Check if a board is valid (no conflicts).
+#### Difficulty levels:
 
-## 🤚 Testing & Contributing
+Name Approx. clues
 
--   Fork → modify → submit Pull Request
--   Add tests for new functionality
--   Follow existing code style (plain JavaScript)
--   Open Issues for bugs or feature requests
+---
+
+easy \~62
+medium \~52
+expert \~42
+master \~32
+extreme \~22
+
+### `sudoku.solve(board)`
+
+Solves a given Sudoku board.\
+Returns the solution string, or `false` if unsolvable.
+
+### `sudoku.validate_board(board)`
+
+Checks board format (length, characters).\
+Returns `true` or an error message.
+
+## 🔧 Roadmap / TODO
+
+-   Rewrite generator to use logic-based methods\
+-   Guarantee unique-solution puzzles\
+-   Add proper logical hints\
+-   Add difficulty grading\
+-   Improve performance & seeding
+
+## 🤚 Contributing
+
+-   Fork → modify → PR\
+-   Write tests\
+-   Follow project style\
+-   Report bugs & issues
 
 ## 📝 License
 
-MIT License — see the [LICENSE](LICENSE) file.
+MIT License --- see the LICENSE file.
 
 ## 🤝 Code of Conduct
 
-This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). All contributors are expected to uphold it.
+This project follows the\
+[Contributor Covenant Code of
+Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
 ## 📢 Changelog
 
-_(Updates here, e.g., version 1.0, features, fixes.)_
-
+View changelog [HERE](CHANGELOG.md)
