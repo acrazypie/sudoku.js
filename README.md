@@ -76,7 +76,7 @@ console.log(valid);
 Generate a Sudoku puzzle.\
 Returns an **81-character string**, using `"."` for empty cells.
 
-#### Difficulty levels:
+#### Difficulty levels
 
 Name Approx. clues
 
